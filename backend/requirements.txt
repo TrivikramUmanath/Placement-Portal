@@ -1,0 +1,19 @@
+flask-restful
+datetime== 4.4
+matplotlib
+pytz 
+numpy
+pandas
+Flask-SQLAlchemy==2.5.1
+flask-security
+email_validator
+bcrypt
+flask-cors
+redis
+celery[redis]
+requests
+weasyprint==52.5
+jinja2
+Flask==2.1.3
+SQLAlchemy==1.4 
+flask-restx==0.5.1
