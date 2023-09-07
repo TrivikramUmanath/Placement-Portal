@@ -2,8 +2,8 @@
  
  <div class="ThreadDetails"> 
     <h1 align ="right">
-        <button  @click="MyAccount()">My Account</button> 
-        <button  @click="Dashboard()">Dashboard</button> 
+      <button  @click="Dashboard()">Dashboard/</button> 
+        <button  @click="MyAccount()">My Account/</button> 
     <button v-if="Category == 'Junior'" @click="Assesments()">Assesments/</button>
     <button v-else @click="MyAssesments()">My Assesments/</button> 
       <button @click="Logout()">Logout/</button>
@@ -108,8 +108,6 @@
     methods:{
       async MyAccount(){
       console.log("Logging out");
-      sessionStorage.removeItem("user_id")
-      sessionStorage.removeItem("Name")
       this.$router.push("/MyAccount");    
     },
     async Dashboard()

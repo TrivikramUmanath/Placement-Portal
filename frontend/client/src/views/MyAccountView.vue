@@ -59,9 +59,9 @@
            </thead>
            <tbody>
              <tr v-for="connection in AllConnections" :key="connection.connection_id">
-              <td  v-if="connection.Approval_Status == 'Not Responded'">{{ connection.Sender_Name }}</td>
-               <td  v-if="connection.Approval_Status == 'Not Responded'">{{ connection.Request }} </td>
-               <td   v-if='connection.Approval_Status == "Not Responded"'>     
+              <td  v-if="connection.Approval_Status == 'Not Responded' && connection.Sender_Name != Name">{{ connection.Sender_Name }}</td>
+               <td  v-if="connection.Approval_Status == 'Not Responded' && connection.Sender_Name != Name">{{ connection.Request }} </td>
+               <td   v-if='connection.Approval_Status == "Not Responded" && connection.Sender_Name != Name'>     
                 <button  @click="AcceptRequest(connection.connection_id)">Accept </button>
   <br></br> 
          <button @click="RejectRequest(connection.connection_id)">Reject       </button>  
